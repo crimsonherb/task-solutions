@@ -20,8 +20,7 @@ def match(match_id):
 
 
 def is_match(fave_numbers_1, fave_numbers_2):
-    for number in fave_numbers_2:
-        if number not in fave_numbers_1:
-            return False
-
-    return True
+    # Turn list into set and check for intersection
+    same = set(fave_numbers_1).intersection(fave_numbers_2)
+    # Check if all values of intersection is equal to Fave numbers 2
+    return same == set(fave_numbers_2)
